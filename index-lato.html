@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olimpiada letnia</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet" type="text/css"> 
+    <link href="css/global.css" rel="stylesheet" type="text/css">
+    <link href="css/main-banner.css" rel="stylesheet" type="text/css">
+    <link href="css/container.css" rel="stylesheet" type="text/css">
+    <link href="css/about-us.css" rel="stylesheet" type="text/css">
+    <link href="css/main-navigation.css" rel="stylesheet" type="text/css">
+    <link href="css/bookmark.css" rel="stylesheet" type="text/css">
+    <link href="css/gallery.css" rel="stylesheet" type="text/css">
+    <style>
+        .gold::after{
+            content:" (złoto)";
+        }
+        .silver::after{
+            content:" (srebro)";
+        }
+        .bronze::after{
+            content:" (brąz)";
+        }
+        .main-list{
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-navigation">
+        <div class="main-navigation__inner">
+            <div class="main-navigation__logo">
+                <a href="index.html#" class="main-navigation__logo-link">
+                    <img src="images/summer-olympic-games-logo.png" alt="Logo" class="main-navigation__logo-image">
+                    Sukcesy Polaków
+                </a>
+            </div>
+            <ul class="main-navigation__menu">
+                <li class="main-navigation__menu-item">
+                    <a href="index.html#" class="main-navigation__link">
+                        Home
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="#lista" class="main-navigation__link">
+                        Medaliści
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="#" class="main-navigation__link">
+                        Olimpiada Letnia
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="index-zima.html" class="main-navigation__link">
+                        Olimpiada Zimowa
+                    </a>
+                </li>
+            </ul>
+            <button class="main-navigation__mobile-button">
+                <img src="images/navigation.svg" alt="Otwórz / zamknij nawigacje" class="main-navigation__mobile-button-image">
+            </button>
+        </div>
+    </nav>
+    <script>
+        (() => {
+    const button = document.querySelector(".main-navigation__mobile-button");
+    const menu = document.querySelector(".main-navigation__menu")
+
+    const toggleClass = () => {
+        menu.classList.toggle("main-navigation__menu--open");
+    };
+
+    button.addEventListener("click", toggleClass);
+    menu.addEventListener("click", toggleClass);
+})();
+    </script>
+    <section class="main-banner" style="background-image: url('https://d-art.ppstatic.pl/kadry/k/r/1/4b/0b/57b3342b2eae0_o_full.jpg');">
+        <a href="#about-us" class="main-banner__button">
+            Więcej szczegółów
+        </a>
+    </section>
+    <div class="container" id="about-us">
+        <section class="about-us">
+            <div class="about-us__text">
+                <h3 class="about-us__header">Osiągnięcia polaków na letnich igrzyskach olimpijskich</h3>
+                <p class="about-us__paragraph">
+                    Polska na letnich igrzyskach olimpijskich zdobyła 68 złotych krążków, 83 srebrne i 133 brązowe, co daje łącznie 284 medale.   
+                </p>
+                <p class="about-us__paragraph">
+                    Oficjalnie Polacy uczestniczą w letnich igrzyskach olimpijskich od roku 1924, choć już wcześniej pojawiali się w ekipach państw zaborczych. W tym okresie Polskę reprezentowało w 25 dyscyplinach olimpijskich 1914 sportowców, z czego 1534 mężczyzn i 375 kobiet.
+                </p>
+            </div>
+            <img class="about-us__image" src="images/third.jpg" alt="">
+        </section>
+    </div>
+    <section class="bookmark" id="lista" style="   background-image: url('images/gallery-bookmark.jpg');">
+        <h2 class="bookmark__header">Medaliści</h2>
+        <p class="bookmark__description">Spójrz na liste polskich medalistów.</p>
+    </section>
+    <div class="container">
+        <ol class="main-list">
+            <li>Rio de Janeiro 2016
+                <ol type="I">
+                    <li class="gold">Anita Włodarczyk – rzut młotem</li>
+                    <li class="gold">Magdalena Fularczyk-Kozłowska, Natalia Madaj – wioślarstwo, dwójka podwójna</li>
+                    <li class="silver">Piotr Małachowski – rzut dyskiem</li>
+                    <li class="silver">Marta Walczykiewicz – kajakarstwo, jedynka na 200 m</li>
+                    <li class="silver">Maja Włoszczowska – kolarstwo górskie</li>
+                    <li class="bronze">Rafał Majka – kolarstwo szosowe, wyścig indywidualny</li>
+                    <li class="bronze">Monika Michalik – zapasy w stylu wolnym, kategoria 63 kg</li>
+                    <li class="bronze">Oktawia Nowacka – pięciobój nowoczesny, indywidualnie</li>
+                    <li class="bronze">Wojciech Nowicki – rzut młotem</li>
+                    <li class="bronze">Beata Mikołajczyk, Karolina Naja – kajakarstwo, dwójka na 500 m</li>
+                    <li class="bronze">Monika Ciaciuch, Agnieszka Kobus, Joanna Leszczyńska, Maria Springwald – wioślarstwo, czwórka podwójna</li>
+                </ol>
+            </li>
+            <li>Londyn 2012
+                <ol type="I">
+                    <li class="gold">Tomasz Majewski – pchnięcie kulą</li>
+                    <li class="gold">Adrian Zieliński – podnoszenie ciężarów, kategoria 85 kg</li>
+                    <li class="gold">Anita Włodarczyk – rzut młotem</li>
+                    <li class="silver">Sylwia Bogacka – strzelectwo, karabinek pneumatyczny</li>
+                    <li class="bronze">Bartłomiej Bonk – podnoszenie ciężarów, kategoria 105 kg</li>
+                    <li class="bronze">Damian Janikowski – zapasy w stylu klasycznym, kategoria 84 kg</li>
+                    <li class="bronze">Przemysław Miarczyński – żeglarstwo, klasa RS:X</li>
+                    <li class="bronze">Zofia Noceti-Klepacka – żeglarstwo, klasa RS:X</li>
+                    <li class="bronze">Magdalena Fularczyk, Julia Michalska – wioślarstwo, dwójka podwójna</li>
+                    <li class="bronze">Beata Mikołajczyk, Karolina Naja – kajakarstwo, dwójka na 500 m</li>
+                    <li class="bronze">Tomasz Zieliński – podnoszenie ciężarów, kategoria 94 kg</li>
+                </ol>
+            </li>
+            <li>Pekin 2008
+                <ol type="I">
+                    <li class="gold">Leszek Blanik – gimnastyka, skok</li>
+                    <li class="gold">Szymon Kołecki – podnoszenie ciężarów, kategoria 94 kg</li>
+                    <li class="gold">Tomasz Majewski – pchnięcie kulą</li>
+                    <li class="gold">Michał Jeliński, Marek Kolbowicz, Adam Korol, Konrad Wasielewski – wioślarstwo, czwórka podwójna</li>
+                    <li class="silver">Piotr Małachowski – rzut dyskiem</li>
+                    <li class="silver">Maja Włoszczowska – kolarstwo górskie</li>
+                    <li class="silver">Aneta Konieczna, Beata Mikołajczyk – kajakarstwo, dwójka na 500 m</li>
+                    <li class="silver">Robert Andrzejuk, Tomasz Motyka, Adam Wiercioch, Radosław Zawrotniak – szermierka, szpada drużynowo</li>
+                    <li class="silver">Miłosz Bernatajtys, Bartłomiej Pawełczak, Łukasz Pawłowski, Paweł Rańda – wioślarstwo, czwórka bez sternika wagi lekkiej</li>
+                    <li class="bronze">Agnieszka Wieszczek – zapasy w stylu wolnym, kategoria 72 kg</li>
+                    <li class="bronze">Marcin Dołęga – podnoszenie ciężarów, kategoria 105 kg</li>
+                </ol>
+            </li>
+            <li>Ateny 2004
+                <ol type="I">
+                    <li class="gold">Otylia Jędrzejczak – pływanie, 200 m stylem motylkowym</li>
+                    <li class="gold">Robert Korzeniowski – chód na 50 km</li>
+                    <li class="gold">Tomasz Kucharski, Robert Sycz – wioślarstwo, dwójka podwójna wagi lekkiej</li>
+                    <li class="silver">Otylia Jędrzejczak – pływanie, 100 m stylem motylkowym</li>
+                    <li class="silver">Otylia Jędrzejczak – pływanie, 400 m stylem dowolnym</li>
+                    <li class="bronze">Sylwia Gruchała – szermierka, floret indywidualnie</li>
+                    <li class="bronze">Mateusz Kusznierewicz – żeglarstwo, klasa Finn</li>
+                    <li class="bronze">Anna Rogowska – skok o tyczce</li>
+                    <li class="bronze">Agata Wróbel – podnoszenie ciężarów, waga ciężka</li>
+                    <li class="bronze">Aneta Pastuszka, Beata Sokołowska-Kulesza – kajakarstwo, dwójka na 500 m</li>
+                </ol>
+            </li>
+            <li>Sydney 2000
+                <ol type="I">
+                    <li class="gold">Robert Korzeniowski – chód na 20 km</li>
+                    <li class="gold">Robert Korzeniowski – chód na 50 km</li>
+                    <li class="gold">Renata Mauer-Różańska – strzelectwo, karabinek małokalibrowy w 3 postawach</li>
+                    <li class="gold">Kamila Skolimowska – rzut młotem</li>
+                    <li class="gold">Szymon Ziółkowski – rzut młotem</li>
+                    <li class="gold">Tomasz Kucharski, Robert Sycz – wioślarstwo, dwójka podwójna wagi lekkiej</li>
+                    <li class="silver">Szymon Kołecki – podnoszenie ciężarów, waga lekkociężka</li>
+                    <li class="silver">Agata Wróbel – podnoszenie ciężarów, waga ciężka</li>
+                    <li class="silver">Paweł Baraszkiewicz, Daniel Jędraszko – kajakarstwo-kanadyjki, dwójka na 500 m</li>
+                    <li class="silver">Krzysztof Kołomański, Michał Staniszewski – kajakarstwo górskie-kanadyjki, dwójka slalom</li>
+                    <li class="silver">Sylwia Gruchała, Magdalena Mroczkiewicz, Anna Rybicka, Barbara Wolnicka – szermierka, floret drużynowo</li>
+                    <li class="bronze">Leszek Blanik – gimnastyka, skok</li>
+                    <li class="bronze">Beata Sokołowska-Kulesza, Aneta Pastuszka – kajakarstwo, dwójka na 500 m</li>
+                    <li class="bronze">Dariusz Białkowski, Grzegorz Kotowicz, Adam Seroczyński, Marek Witkowski – kajakarstwo, czwórka na 1000 m</li>
+                </ol>
+            </li>
+            <li>Atlanta 1996
+                <ol type="I">
+                    <li class="gold">Robert Korzeniowski – chód na 50 km</li>
+                    <li class="gold">Mateusz Kusznierewicz – żeglarstwo, klasa Finn</li>
+                    <li class="gold">Renata Mauer – strzelectwo, karabinek pneumatyczny</li>
+                    <li class="gold">Paweł Nastula – judo, waga półciężka</li>
+                    <li class="gold">Ryszard Wolny – zapasy w stylu klasycznym, waga lekka</li>
+                    <li class="gold">Andrzej Wroński – zapasy w stylu klasycznym, waga ciężka</li>
+                    <li class="gold">Włodzimierz Zawadzki – zapasy w stylu klasycznym, waga piórkowa</li>
+                    <li class="silver">Jacek Fafiński – zapasy w stylu klasycznym, waga półciężka</li>
+                    <li class="silver">Artur Partyka – skok wzwyż</li>
+                    <li class="silver">Mirosław Rzepkowski – strzelectwo, rzutki „skeet”</li>
+                    <li class="silver">Aneta Szczepańska – judo, waga średnia</li>
+                    <li class="silver">Piotr Kiełpikowski, Adam Krzesiński, Jarosław Rodzewicz, Ryszard Sobczak – szermierka, floret drużynowo</li>
+                    <li class="bronze">Andrzej Cofalik – podnoszenie ciężarów, waga półciężka</li>
+                    <li class="bronze">Piotr Markiewicz – kajakarstwo, jedynka na 500 m</li>
+                    <li class="bronze">Renata Mauer – strzelectwo, karabinek standard</li>
+                    <li class="bronze">Józef Tracz – zapasy w stylu klasycznym, waga półśrednia</li>
+                    <li class="bronze">Iwona Dzięcioł, Katarzyna Klata, Joanna Nowicka – łucznictwo, drużynowo</li>
+                </ol>
+            </li>
+            <li>Barcelona 1992
+                <ol type="I">
+                    <li class="gold">Waldemar Legień – judo, waga średnia</li>
+                    <li class="gold">Arkadiusz Skrzypaszek – pięciobój nowoczesny, indywidualnie</li>
+                    <li class="gold">Maciej Czyżowicz, Dariusz Goździak, Arkadiusz Skrzypaszek – pięciobój nowoczesny, drużynowo</li>
+                    <li class="silver">Krzysztof Siemion – podnoszenie ciężarów, waga półciężka</li>
+                    <li class="silver">Piotr Stępień – zapasy w stylu klasycznym, waga średnia</li>
+                    <li class="silver">Rafał Szukała – pływanie, 100 m stylem motylkowym</li>
+                    <li class="silver">Józef Tracz – zapasy w stylu klasycznym, waga półśrednia</li>
+                    <li class="silver">Maciej Freimut, Wojciech Kurpiewski – kajakarstwo, dwójka na 500 m</li>
+                    <li class="silver">Dariusz Adamczuk, Marek Bajor, Jerzy Brzęczek, Dariusz Gęsior, Marcin Jałocha, Andrzej Juskowiak, Aleksander Kłak, Andrzej Kobylański, Dariusz Koseła, Wojciech Kowalczyk, Marek Koźmiński, Tomasz Łapiński, Grzegorz Mielcarski, Arkadiusz Onyszko, Ryszard Staniek, Dariusz Szubert, Piotr Świerczewski, Mirosław Waligóra, Tomasz Wałdoch, Tomasz Wieszczycki – piłka nożna</li>
+                    <li class="bronze">Wojciech Bartnik – boks, waga półciężka</li>
+                    <li class="bronze">Kajetan Broniewski – wioślarstwo, jedynka</li>
+                    <li class="bronze">Izabela Dylewska – kajakarstwo, jedynka na 500 m</li>
+                    <li class="bronze">Małgorzata Książkiewicz – strzelectwo, karabinek małokalibrowy w 3 postawach</li>
+                    <li class="bronze">Waldemar Malak – podnoszenie ciężarów, waga ciężka</li>
+                    <li class="bronze">Artur Partyka – skok wzwyż</li>
+                    <li class="bronze">Sergiusz Wołczaniecki – podnoszenie ciężarów, waga lekkociężka</li>
+                    <li class="bronze">Dariusz Białkowski, Grzegorz Kotowicz – kajakarstwo, dwójka na 1000 m</li>
+                    <li class="bronze">Wojciech Jankowski, Maciej Łasicki, Jacek Streich, Tomasz Tomiak, Michał Cieślak (sternik) – wioślarstwo, czwórka ze sternikiem</li>
+                    <li class="bronze">Piotr Kiełpikowski, Adam Krzesiński, Cezary Siess, Ryszard Sobczak, Marian Sypniewski – szermierka, floret drużynowo</li>
+                </ol>
+            </li>
+            <li>Seul 1988
+                <ol type="I">
+                    <li class="gold">Waldemar Legień – judo, waga lekkośrednia</li>
+                    <li class="gold">Andrzej Wroński – zapasy w stylu klasycznym, waga ciężka</li>
+                    <li class="silver">Andrzej Głąb – zapasy w stylu klasycznym, waga papierowa</li>
+                    <li class="silver">Janusz Olech – szermierka, szabla indywidualnie</li>
+                    <li class="silver">Janusz Pawłowski – judo, waga piórkowa</li>
+                    <li class="silver">Marek Dopierała, Marek Łbik – kajakarstwo-kanadyjki, dwójka na 500 m</li>
+                    <li class="silver">Joachim Halupczok, Zenon Jaskuła, Marek Leśniewski, Andrzej Sypytkowski – kolarstwo szosowe, wyścig drużynowy</li>
+                    <li class="bronze">Jan Dydak – boks, waga półśrednia</li>
+                    <li class="bronze">Izabela Dylewska – kajakarstwo, jedynka na 500 m</li>
+                    <li class="bronze">Andrzej Gołota – boks, waga ciężka</li>
+                    <li class="bronze">Henryk Petrich – boks, waga półciężka</li>
+                    <li class="bronze">Józef Tracz – zapasy w stylu klasycznym, waga półśrednia</li>
+                    <li class="bronze">Artur Wojdat – pływanie, 400 m stylem dowolnym</li>
+                    <li class="bronze">Janusz Zarenkiewicz – boks, waga superciężka</li>
+                    <li class="bronze">Sławomir Zawada – podnoszenie ciężarów, waga lekkociężka</li>
+                    <li class="bronze">Marek Dopierała, Marek Łbik – kajakarstwo-kanadyjki, dwójka na 1000 m</li>
+                </ol>
+            </li>
+            <li>Moskwa 1980
+                <ol type="I">
+                    <li class="gold">Jan Kowalczyk (koń Artemor) – jeździectwo, konkurs skoków indywidualnie</li>
+                    <li class="gold">Władysław Kozakiewicz – skok o tyczce</li>
+                    <li class="gold">Bronisław Malinowski – bieg na 3000 m z przeszkodami</li>
+                    <li class="silver">Roman Bierła – zapasy w stylu klasycznym, waga ciężka</li>
+                    <li class="silver">Jan Dołgowicz – zapasy w stylu klasycznym, waga średnia</li>
+                    <li class="silver">Urszula Kielan – skok wzwyż</li>
+                    <li class="silver">Czesław Lang – kolarstwo szosowe, wyścig indywidualny</li>
+                    <li class="silver">Józef Lipień – zapasy w stylu klasycznym, waga kogucia</li>
+                    <li class="silver">Paweł Skrzecz – boks, waga półciężka</li>
+                    <li class="silver">Władysław Stecyk – zapasy w stylu wolnym, waga musza</li>
+                    <li class="silver">Andrzej Supron – zapasy w stylu klasycznym, waga lekka</li>
+                    <li class="silver">Tadeusz Ślusarski – skok o tyczce</li>
+                    <li class="silver">Jacek Wszoła – skok wzwyż</li>
+                    <li class="silver">Małgorzata Dłużewska, Czesława Kościańska – wioślarstwo, dwójka bez sternika</li>
+                    <li class="silver">Janusz Bobik (koń Szampan), Wiesław Hartman (koń Norton), Jan Kowalczyk (koń Artemor), Marian Kozicki (koń Bremen) – jeździectwo, konkurs skoków drużynowo</li>
+                    <li class="silver">Leszek Dunecki, Zenon Licznerski, Marian Woronin, Krzysztof Zwoliński – sztafeta 4*100 m</li>
+                    <li class="silver">Ludomir Chronowski, Piotr Jabłkowski, Andrzej Lis, Mariusz Strzałka, Leszek Swornowski – szermierka, szpada drużynowo</li>
+                    
+                </ol>
+            </li>
+        </ol>
+    </div>
+    </body>
+    </html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olimpiada Zimowa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=latin-ext" rel="stylesheet" type="text/css"> 
+    <link href="css/global.css" rel="stylesheet" type="text/css">
+    <link href="css/main-banner.css" rel="stylesheet" type="text/css">
+    <link href="css/container.css" rel="stylesheet" type="text/css">
+    <link href="css/about-us.css" rel="stylesheet" type="text/css">
+    <link href="css/main-navigation.css" rel="stylesheet" type="text/css">
+    <link href="css/bookmark.css" rel="stylesheet" type="text/css">
+    <link href="css/gallery.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav class="main-navigation">
+        <div class="main-navigation__inner">
+            <div class="main-navigation__logo">
+                <a href="index.html#" class="main-navigation__logo-link">
+                    <img src="images/summer-olympic-games-logo.png" alt="Logo" class="main-navigation__logo-image">
+                    Sukcesy Polaków
+                </a>
+            </div>
+            <ul class="main-navigation__menu">
+                <li class="main-navigation__menu-item">
+                    <a href="index.html#" class="main-navigation__link">
+                        Home
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="index.html#galeria" class="main-navigation__link">
+                        Galeria
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="index-lato.html" class="main-navigation__link">
+                        Olimpiada Letnia
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="#" class="main-navigation__link">
+                        Olimpiada Zimowa
+                    </a>
+                </li>
+            </ul>
+            <button class="main-navigation__mobile-button">
+                <img src="images/navigation.svg" alt="Otwórz / zamknij nawigacje" class="main-navigation__mobile-button-image">
+            </button>
+        </div>
+    </nav>
+    <script>
+        (() => {
+    const button = document.querySelector(".main-navigation__mobile-button");
+    const menu = document.querySelector(".main-navigation__menu")
+
+    const toggleClass = () => {
+        menu.classList.toggle("main-navigation__menu--open");
+    };
+
+    button.addEventListener("click", toggleClass);
+    menu.addEventListener("click", toggleClass);
+})();
+    </script>
+    <section class="main-banner" style="background-image: url('http://www.luizazlotkowska.com/sites/luizazlotkowska.com/files/rep.jpg');">
+        <a href="#about-us" class="main-banner__button">
+            Więcej szczegółów
+        </a>
+    </section>
+    </body>
+    </html>
