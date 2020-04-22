@@ -10,20 +10,65 @@
     <link href="css/main-banner.css" rel="stylesheet" type="text/css">
     <link href="css/container.css" rel="stylesheet" type="text/css">
     <link href="css/about-us.css" rel="stylesheet" type="text/css">
+    <link href="css/main-navigation.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <section class="main-banner">
+    <nav class="main-navigation">
+        <div class="main-navigation__inner">
+            <div class="main-navigation__logo">
+                <a href="#" class="main-navigation__logo-link">
+                    <img src="images/summer-olympic-games-logo.png" alt="Logo" class="main-navigation__logo-image">
+                    Sukcesy Polaków
+                </a>
+            </div>
+            <ul class="main-navigation__menu">
+                <li class="main-navigation__menu-item">
+                    <a href="#" class="main-navigation__link">
+                        Home
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="index-lato.html" class="main-navigation__link">
+                        Olimpiada Letnia
+                    </a>
+                </li>
+                <li class="main-navigation__menu-item">
+                    <a href="index-zima.html" class="main-navigation__link">
+                        Olimpiada Zimowa
+                    </a>
+                </li>
+            </ul>
+            <button class="main-navigation__mobile-button">
+                <img src="images/navigation.svg" alt="Otwórz / zamknij nawigacje" class="main-navigation__mobile-button-image">
+            </button>
+        </div>
+    </nav>
+    <script>
+        (() => {
+    const button = document.querySelector(".main-navigation__mobile-button");
+    const menu = document.querySelector(".main-navigation__menu")
+
+    const toggleClass = () => {
+        menu.classList.toggle("main-navigation__menu--open");
+    };
+
+    button.addEventListener("click", toggleClass);
+    menu.addEventListener("click", toggleClass);
+})();
+    </script>
+    
+    <section class="main-banner" style="background-image: url('images/banner.jpg');">
         <a href="#about-us" class="main-banner__button">
             Dowiedz się więcej
         </a>
     </section>
-    <div class="container">
+    <div class="container" id="about-us">
         <section class="about-us">
             <div class="about-us__text">
                 <h3 class="about-us__header">Nie jesteśmy tylko uczestnikami</h3>
                 <p class="about-us__paragraph">Od kilkudziesięciu lat Polacy zdobywają medale na Igrzyskach Olimpijskich Letnich, czy też Zimowych. Na ten moment uzbieraliśmy łącznie ponad 300 medali. Na wspomnianych zawodach zajmujemy 19 oraz 23 miejsce w Klasyfikacji Medalowej Wszech Czasów, która przedstawia liczbę zdobytych medali przez poszczególne państwa podczas letnich i zimowych igrzysk olimpijskich, tj. od 1896 do 2016 r.</p>
             </div>
-            <img class="about-us__image" src="https://dvqlxo2m2q99q.cloudfront.net/000_clients/1057233/page/1057233DYs9WUVs.jpg" alt="">
+            <img class="about-us__image" src="images/image-second.jpg" alt="">
         </section>
     </div>
 </body>
