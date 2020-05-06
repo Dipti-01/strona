@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szyfrowanie</title>
+    <style>
+
+        html{
+            background-image: url(https://i1.pickpik.com/photos/135/941/297/clean-clean-background-blur-green-preview.jpg);
+            background-size: cover;
+        }
+        .slowo{
+            position:absolute;
+            left:210px;
+            top:0;
+            height: 25px;
+            width: 220px;
+            line-height: 30px;
+            font-weight: bold;
+            background-color: #7b9e86;
+            color:white;
+            text-align: center;
+            border: solid 2px whitesmoke;
+        }
+        .haslo{
+            position:absolute;
+            left:210px;
+            top:100px;
+            height: 25px;
+            width: 220px;
+            line-height: 30px;
+            font-weight: bold;
+            background-color: #7b9e86;
+            color:white;
+            text-align: center;
+            border: solid 2px whitesmoke;  
+        }
+        p{
+            position: absolute;
+           
+            top:91px;
+        }
+        .btn1{
+            position:absolute;
+            left:450px;
+            
+            top:1px;
+            height: 29px;
+            border:none;
+        }
+        .btn2{
+            position: absolute;
+            border:none;
+            left:450px;
+            top:101px;
+            height: 29px;
+        }
+        .wynik{
+            background-color: whitesmoke;
+            color:#7b9e86;
+            border: solid 2px #7b9e86;  
+            position: absolute;
+            font-size: 11px;
+            height: 25px;
+            line-height: 30px;
+            width: 200px;
+            text-align: center;
+            left: 223px;
+            top:40px;
+        }
+        .tresc{
+            background-color: whitesmoke;
+            color:#7b9e86;
+            border: solid 2px #7b9e86;  
+            position: absolute;
+            height: 25px;
+            line-height: 30px;
+            width: 200px;
+            text-align: center;
+            left: 223px;
+            top: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+Wpisz tekst do zaszyfrowania:
+</div>
+    <input type="text" class="slowo" placeholder="tekst">
+    <button class="btn1">zatwierdź</button>
+    <div class="wynik">Tutaj pojawi się zaszyfrowana wiadomość</div>
+    <p>Podaj hasło, aby odzyfrować:</p>
+    <input type="password" class="haslo" placeholder="podaj hasło">
+    <button class="btn2">sprawdź</button>
+    <div class="tresc"></div>
+<script>
+    const btn = document.querySelector('.btn1');
+    const div=document.querySelector('.wynik');
+    const tab=["!","@", "#","$","%","^","&","*","`","-"];
+    const guz=document.querySelector('.btn2');
+    const div2=document.querySelector('.tresc');
+    btn.addEventListener('click',function jeden(){
+        var tekst=document.querySelector('.slowo').value;//pobiera wartość z pola input o klasie slowo
+        var j=tekst.length;
+        var tab2=[];
+        document.querySelector('.slowo').value=null;//czyści wartość w polu input o klasie slowo
+        for (var i=0; i<j; i++) {
+        var a=Math.floor(Math.random()*10);//przypisuje zmiennej a losową wartość od 0 do 9
+      tab2[i]=tab[a];//przypisuje do tablicy tab2 elementy z tablicy tab o indexie a
+      div.style="font-size:16px;";
+}
+div.innerHTML=tab2.join("");
+guz.addEventListener('click',function dwa(){
+        const haselko=document.querySelector('.haslo').value;
+        if(haselko=="jd")div2.innerHTML=tekst;
+        else div2.innerHTML="Złe hasło, brak dostępu";
+    })
+            document.querySelector('.haslo').value=null;//czyści drugie pole po wciśnięciu pierwszego przycisku
+            div2.innerHTML="";
+    })
+</script>    
+</body>
+</html>
